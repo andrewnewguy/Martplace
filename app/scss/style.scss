@@ -1,0 +1,471 @@
+@import 'global';
+@import 'vars';
+@import 'fonts';
+
+// Start header
+
+.header__top-inner {
+
+    background-color: #eef1f3;
+}
+
+.header__top {
+
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+
+    &-box {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 530px;
+        width: 100%;
+
+        .header__top-button {
+
+            font-size: 14px;
+            color: #fff;
+            line-height: 28px;
+            @include f400;
+            background-color: $blue;
+            padding: 4px 18px;
+            border-radius: 18px;
+        }
+
+        .header__top-menu {
+
+            max-width: 350px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .header__circle {
+
+                position: relative;
+                width: 20px;
+                height: 20px;
+                position: relative;
+
+                &::before {
+
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #7e8fa1;
+                }
+
+                span {
+
+                    position: absolute;
+                    width: 22px;
+                    height: 22px;
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: #ff6a6c;
+                    font-size: 14px;
+                    color: #fff;
+                    top: -16px;
+                    right: -11px;
+                    line-height: 21px;
+                    @include f500;
+                }
+            }
+
+            .message span {
+
+                background-color: #62d03b;
+            }
+
+            .basket span {
+
+                background-color: #0674ec;
+            }
+        }
+    }
+
+    .menu__box {
+
+        height: 100px;
+        width: 40px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .user__box-link {
+
+        max-width: 175px;
+        width: 100%;
+        display: flex;
+
+        .user__box-image {
+
+            height: 50px;
+            width: 50px;
+            background-color: #7c7979;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .user__box-info {
+
+            line-height: 22px;
+
+            .user__name {
+
+                font-size: 16px;
+                color: #333;
+                @include f500;
+            }
+
+            .user__money {
+
+                font-size: 15px;
+                color: #0674ec;
+                @include f400;
+            }
+        }
+    }
+}
+
+.menu__box,
+.user__box {
+
+    &:hover {
+
+        .circle__menu {
+
+            display: block;
+        }
+    }
+}
+
+.header__bottom-inner {
+
+    background-color: #fff;
+
+    .header__bottom-box {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+
+        .header__bottom-menu {
+
+            max-width: 500px;
+            width: 100%;
+
+            ul {
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-transform: uppercase;
+                font-size: 15px;
+                color: #333;
+                @include f500;
+            }
+        }
+
+        .header__bottom-search {
+
+            max-width: 360px;
+            width: 100%;
+            align-items: center;
+
+            form {
+
+                position: relative;
+
+                input {
+
+                    height: 45px;
+                    width: 100%;
+                    border-radius: 22px;
+                    border: 1px solid #d9dfe5;
+                    outline: none;
+                    padding: 0 25px;
+
+                    &::placeholder {
+
+                        font-size: 15px;
+                        @include f400;
+                        color: #898f96;
+                    }
+                }
+
+                button {
+
+                    position: absolute;
+                    width: 70px;
+                    height: 45px;
+                    border-radius: 22px;
+                    background-color: #0674ec;
+                    outline: none;
+                    border: none;
+                    line-height: 30px;
+                    padding: 11px 0;
+                    right: 0;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+// End header
+
+
+// Start Footer
+
+.footer {
+
+    background-color: #262b30;
+}
+
+.footer__inner {
+
+    margin-top: 115px;
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__col-info {
+
+    max-width: 265px;
+    width: 100%;
+
+    .footer__col-logo {
+
+        margin-bottom: 35px;
+    }
+}
+
+.footer__col-text,
+.footer__col-contacts {
+
+    font-size: 15px;
+    line-height: 28px;
+    color: #ababab;
+    @include f400;
+    margin-bottom: 30px;
+
+    a {
+
+        color: #ababab;
+        line-height: 32px;
+    }
+}
+
+.footer__col-title {
+
+    margin-bottom: 35px;
+    font-size: 18px;
+    line-height: 42px;
+    color: #fff;
+    @include f400;
+}
+
+.footer__col-contacts {
+
+    padding-left: 30px;
+}
+
+.footer__col-news {
+
+    max-width: 375px;
+    width: 100%;
+
+    .footer__col-links {
+
+        .facebook-link {
+
+            background-color: #395799;
+        }
+
+        .twitter-link {
+
+            background-color: #19b2f5;
+        }
+
+        .google-link {
+
+            background-color: #f05b44;
+        }
+
+        .pinterest-link {
+
+            background-color: #9c0c1c;
+        }
+
+        .linkedin-link {
+
+            background-color: #0da6be;
+        }
+
+        .dribble-link {
+
+            background-color: #eb5891;
+        }
+
+        li {
+
+            height: 42px;
+            width: 42px;
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+
+            a {
+
+                height: 16px;
+                width: 16px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &+li {
+
+                margin-left: 15px;
+            }
+        }
+    }
+
+    .footer__col-search {
+
+        margin-bottom: 50px;
+
+        form {
+
+            position: relative;
+            max-width: 360px;
+
+            input {
+
+                height: 45px;
+                width: 100%;
+                border-radius: 22px;
+                border: 1px solid #d9dfe5;
+                outline: none;
+                padding: 0 25px;
+
+                &::placeholder {
+
+                    font-size: 15px;
+                    @include f400;
+                    color: #898f96;
+                }
+            }
+
+            button {
+
+                position: absolute;
+                width: 110px;
+                height: 45px;
+                border-radius: 22px;
+                background-color: #0674ec;
+                outline: none;
+                border: none;
+                font-size: 15px;
+                line-height: 42px;
+                @include f400;
+                color: #fff;
+                right: 0;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .footer__col-links ul {
+
+        display: flex;
+    }
+}
+
+.footer__copy {
+
+    background-color: #192027;
+    height: 95px;
+    text-align: center;
+
+    .footer__copy-text {
+
+        font-size: 15px;
+        color: #999999;
+        @include f400;
+        padding: 40px 0;
+
+        span {
+
+            color: #fff;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// End Footer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import 'media';
