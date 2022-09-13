@@ -43,39 +43,6 @@
             justify-content: space-between;
             align-items: center;
 
-            .header__circle {
-
-                position: relative;
-                width: 20px;
-                height: 20px;
-                position: relative;
-
-                &::before {
-
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    color: #7e8fa1;
-                }
-
-                span {
-
-                    position: absolute;
-                    width: 22px;
-                    height: 22px;
-                    text-align: center;
-                    border-radius: 50%;
-                    background-color: #ff6a6c;
-                    font-size: 14px;
-                    color: #fff;
-                    top: -16px;
-                    right: -11px;
-                    line-height: 21px;
-                    @include f500;
-                }
-            }
-
             .message span {
 
                 background-color: #62d03b;
@@ -90,11 +57,12 @@
 
     .menu__box {
 
-        height: 100px;
+        height: 60px;
         width: 40px;
         align-items: center;
         justify-content: center;
         display: flex;
+        margin-top: 40px;
     }
 
     .user__box-link {
@@ -133,20 +101,376 @@
     }
 }
 
+.header__circle {
+
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+
+    &::before {
+
+        color: #7e8fa1;
+    }
+
+    span {
+
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #ff6a6c;
+        font-size: 14px;
+        color: #fff;
+        top: -16px;
+        right: -11px;
+        line-height: 21px;
+        @include f500;
+    }
+}
+
+.notification__menu {
+
+    left: -20px;
+    padding: 0 25px;
+
+    &::before {
+
+        left: 30px;
+    }
+}
+
+.message__menu {
+
+    right: 0;
+
+    &::before {
+
+        right: 15px;
+    }
+
+    &-item {
+
+        padding: 0 25px;
+    }
+
+    .menu-item__image {
+
+        margin-right: 15px;
+    }
+
+    .message__menu-title {
+
+        padding: 0 25px;
+        height: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        color: #000;
+        @include f400;
+        overflow: hidden;
+        transition: all .3s;
+
+        .message__title-link {
+
+            font-size: 0px;
+            color: #0674ec;
+            transition: all .3s;
+            overflow: hidden;
+        }
+    }
+}
+
+.notification__menu,
+.message__menu,
+.basket__menu,
+.user__menu {
+
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    transition: all .3s;
+    top: 60px;
+    background-color: #fff;
+    z-index: 2;
+    width: 370px;
+    border-top-width: 0;
+    box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+
+    &::before {
+
+        position: absolute;
+        content: '';
+        top: -10px;
+        width: 16px;
+        height: 9px;
+        border-style: solid;
+        border-width: 0 8px 9px 8px;
+        border-color: transparent transparent $blue transparent;
+    }
+
+    .notification__menu-title {
+
+        height: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        color: #000;
+        @include f400;
+        overflow: hidden;
+        transition: all .3s;
+
+        .notification__title-link {
+
+            font-size: 0px;
+            color: #0674ec;
+            transition: all .3s;
+            overflow: hidden;
+        }
+    }
+
+    &-item {
+
+        height: 0;
+        border-top: 1px solid #e8ebf0;
+        display: flex;
+        align-items: center;
+        transition: all .3s;
+        overflow: hidden;
+    }
+
+    .menu-item__image,
+    .message__menu-item__image {
+
+        margin-right: 15px;
+
+    }
+
+    .menu-item__message {
+
+        font-size: 0px;
+        line-height: 0px;
+        color: #747a86;
+        @include f400;
+
+
+        span {
+
+            font-size: 0px;
+            line-height: 0px;
+            color: #333333;
+            @include f500;
+        }
+
+        a {
+
+            font-size: 0px;
+            line-height: 0px;
+            color: $blue;
+            @include f400;
+        }
+    }
+
+    .menu-item__date {
+
+        font-size: 14px;
+        line-height: 28px;
+        color: #747a86;
+        @include f400;
+    }
+
+    .menu-item__icon {
+
+        font-size: 15px;
+        padding: 8px;
+        border-radius: 50%;
+    }
+
+    .icon-heart {
+
+        background-color: #e6f1fd;
+        color: $blue;
+    }
+
+    .icon-bubble {
+
+        background-color: #f1ecf9;
+        color: #7347c1;
+    }
+
+    .icon-cart {
+
+        background-color: #fff0f0;
+        color: #ff6a6c;
+    }
+
+    .icon-star {
+
+        background-color: #effaeb;
+        color: #62d03a;
+    }
+}
+
 .menu__box,
 .user__box {
 
     position: relative;
 
+
     &:hover {
 
-        .circle__menu {
+        .notification__menu,
+        .message__menu,
+        .basket__menu,
+        .user__menu {
 
             position: absolute;
             display: block;
-            top: 100px;
+            height: auto;
+            border-top: 1px solid $blue;
             background-color: #fff;
-            z-index: 2;
+            overflow: visible;
+            transition: all .3s;
+
+            &::before {
+
+                position: absolute;
+                content: '';
+                top: -10px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 8px 9px 8px;
+                border-color: transparent transparent $blue transparent;
+            }
+
+            &-item {
+
+                height: 100px;
+                border-top: 1px solid #e8ebf0;
+                display: flex;
+                align-items: center;
+            }
+
+            .notification__menu-title {
+
+                height: 65px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 18px;
+                color: #000;
+                @include f400;
+
+                .notification__title-link {
+
+                    font-size: 15px;
+                    color: #0674ec;
+                }
+            }
+
+            .menu-item__message {
+
+                font-size: 15px;
+                line-height: 20px;
+                color: #747a86;
+                @include f400;
+
+
+                span {
+
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #333333;
+                    @include f500;
+                }
+
+                a {
+
+                    font-size: 15px;
+                    line-height: 22px;
+                    color: $blue;
+                    @include f400;
+                }
+            }
+
+            .message__menu {
+
+                padding: 0;
+
+                .message__menu-item {
+
+                    height: 85px;
+                }
+            }
+
+            .message__menu-title {
+
+                height: 65px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 18px;
+                color: #000;
+                @include f400;
+
+                .message__title-link {
+
+                    font-size: 15px;
+                    color: #0674ec;
+                }
+            }
+
+            .message-menu__content {
+
+                display: flex;
+                justify-content: space-between;
+                font-size: 15px;
+                line-height: 20px;
+                color: #747a86;
+                @include f400;
+
+                .message__title a {
+
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #333;
+                    @include f500;
+                    margin-right: 10px;
+
+
+                    &::before {
+
+                        color: $blue;
+                    }
+                }
+
+                .message-menu__date {
+
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: $blue;
+                    @include f400;
+                    margin-right: -15px;
+
+                    span {
+
+                        color: #747a86;
+                    }
+                }
+            }
+
+            .message-menu__text {
+
+                font-size: 15px;
+                line-height: 25px;
+                color: #555;
+                @include f400;
+                margin-top: 5px;
+            }
         }
     }
 }
