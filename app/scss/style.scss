@@ -228,12 +228,17 @@
 
     .basket-item__product {
 
-        font-size: 15px;
-        line-height: 30px;
-        @include f500;
-        color: #7347c1;
         position: relative;
-        padding-left: 20px;
+        
+        a {
+
+            font-size: 15px;
+            line-height: 30px;
+            @include f500;
+            color: #7347c1;
+            padding-left: 20px;
+        }
+
 
         img {
 
@@ -244,6 +249,13 @@
     }
 
     .basket-item__tools {
+
+        button {
+
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
 
         text-align: center;
 
