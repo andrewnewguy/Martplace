@@ -60,6 +60,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-share-2:before {
+  content: "\e900";
+}
+
 .icon-home:before {
   content: "\e800";
 }
@@ -569,4 +573,22 @@
 }
 .icon-pointer-left:before {
   content: "\e8a9";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-linkedin:before {
+  content: "\f0e1";
+}
+.icon-dribbble:before {
+  content: "\f17d";
+}
+.icon-google:before {
+  content: "\f1a0";
+}
+.icon-checkmark:before {
+  content: "\ea10";
 }

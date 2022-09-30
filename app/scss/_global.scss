@@ -46,5 +46,48 @@ li {
     padding: 0 15px;
 }
 
+.breadcrumbs__inner {
 
 
+    padding-top: 55px;
+    overflow: hidden;
+    width: 1200px; 
+
+    .breadcrumbs__list {
+
+        li {
+
+            display: inline-block;
+            position: relative;
+
+            &+li {
+
+                padding-left: 24px;
+                color: #f3f3f8;
+
+                &::before {
+
+                    content: '/';
+                    position: absolute;
+                    left: 8px;
+                    color: #f3f3f8;
+                }
+            }
+
+            &:last-child {
+
+                a,
+                span {
+
+                    color: #bfcad7;
+                    
+                }
+            }
+        }
+
+        a {
+
+            color: #fff;
+        }
+    }
+}
