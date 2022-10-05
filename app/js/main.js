@@ -97,6 +97,25 @@ $(function () {
         $('.category__grid').addClass('list');
     });
 
+    $('.title-popular').on('click', function () {
+        $('.title-popular').addClass('active');
+        $('.popular-content').addClass('active-content').fadeIn();
+        $('.title-latest').removeClass('active');
+        $('.latest-content').removeClass('active-content').hide();
+    });
+
+    $('.title-latest').on('click', function () {
+        $('.title-latest').addClass('active');
+        $('.latest-content').addClass('active-content').fadeIn();
+        $('.title-popular').removeClass('active');
+        $('.popular-content').removeClass('active-content').hide();
+    });
+
+    $('.blog-categories__link').on('click', function(){
+        $(this).addClass('active');
+        $
+    });
+
     var mixer = mixitup('.newest__products-inner');
 
 });
