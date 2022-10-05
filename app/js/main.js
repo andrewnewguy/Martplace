@@ -36,9 +36,7 @@ $(function () {
         $('.single-license__text').removeClass('active-text');
         $('.single-item__price').removeClass('active-price');
         $('.single-price').removeClass('checked');
-    });
-
-    
+    });    
 
     $('.slider__wrapper').slick({
 
@@ -111,9 +109,10 @@ $(function () {
         $('.popular-content').removeClass('active-content').hide();
     });
 
-    $('.blog-categories__link').on('click', function(){
-        $(this).addClass('active');
-        $
+    $('.blog-categories__link').on('click', function(event){        
+        $('.blog__aside-item-content').find('.blog-categories__link').removeClass('active');    
+        $(this).addClass('active');    
+        return false;
     });
 
     var mixer = mixitup('.newest__products-inner');
