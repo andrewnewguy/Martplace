@@ -115,6 +115,10 @@ $(function () {
         return false;
     });
 
+    $('.remember').on('click', function(){
+        $('.remember').toggleClass('checked');
+    });
+
     var mixer = mixitup('.newest__products-inner');
 
 });
